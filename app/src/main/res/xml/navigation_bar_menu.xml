@@ -1,0 +1,18 @@
+<tabs>
+    <tab
+        id="@+id/tab_calls"
+        icon="@drawable/ic_action_people"
+        title="Calls"
+        activeColor="@color/custom_progress_green_header"
+        />
+    <tab
+        id="@+id/tab_groups"
+        icon="@drawable/ic_action_info"
+        title="Groups"
+        activeColor="@color/custom_progress_green_header" />
+    <tab
+        id="@+id/tab_chats"
+        icon="@drawable/ic_action_watch_later"
+        title="Chats"
+        activeColor="@color/custom_progress_green_header"/>
+</tabs>

@@ -1,0 +1,526 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:background="@color/cpb_white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="10dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                 android:paddingTop="50dp"
+                tools:showIn="@layout/activity_main">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="25dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:text="US Army Fat Calculator"
+                        android:paddingLeft="50dp"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif-Light"
+
+                        android:textAlignment="center"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="8dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="sans-serif-light"
+
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/elevation_header"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="15dp"
+
+
+                         android:paddingRight="15dp"
+                        android:paddingTop="5dp"
+                        android:text="Gender"
+                        />
+
+                    <RadioGroup
+                        android:id="@+id/gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/male"
+                            style="@style/MyRadioButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="Male" />
+
+                        <RadioButton
+                            android:id="@+id/female"
+                            style="@style/MyRadioButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+
+                            android:text="Female" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="2dp"
+                    android:weightSum="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:orientation="vertical">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Age"
+                            android:textSize="15sp"
+                            android:transitionGroup="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:weightSum="1"
+                        android:orientation="horizontal">
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:clipToPadding="false"
+
+                            android:transitionGroup="true"
+                            tools:ignore="UnusedAttribute,NewApi">
+
+                            <EditText
+                                android:id="@+id/years"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:hint="years"
+                                android:fontFamily="sans-serif-light"
+                                android:imeOptions="actionDone"
+                                android:inputType="textNoSuggestions|number"
+                                android:maxLength="3"
+                                android:textSize="@dimen/size_edit_text"
+                                android:transitionGroup="true" />
+                        </android.support.design.widget.TextInputLayout>
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="2dp"
+                    android:weightSum="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:orientation="vertical">
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Height"
+                            android:textSize="15sp"
+                            android:transitionGroup="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:weightSum="1"
+                        android:orientation="horizontal">
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:clipToPadding="false"
+
+                            android:transitionGroup="true"
+                            tools:ignore="UnusedAttribute,NewApi">
+
+                            <EditText
+                                android:id="@+id/height_feets"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:hint="ft."
+                                android:fontFamily="sans-serif-light"
+                                android:imeOptions="actionDone"
+                                android:inputType="textNoSuggestions|number"
+                                android:maxLength="3"
+                                android:textSize="@dimen/size_edit_text"
+                                android:transitionGroup="true" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:clipToPadding="false"
+                            android:paddingEnd="5dp"
+                            android:paddingStart="5dp"
+                            android:transitionGroup="true"
+                            tools:ignore="UnusedAttribute,NewApi">
+
+                            <EditText
+
+                                android:id="@+id/height_inches"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:fontFamily="sans-serif-light"
+                                android:hint="in."
+                                android:imeOptions="actionDone"
+                                android:inputType="textNoSuggestions|number"
+                                android:maxLength="3"
+                                android:paddingEnd="@dimen/spacing_double"
+                                android:paddingStart="@dimen/spacing_double"
+                                android:textSize="@dimen/size_edit_text"
+                                android:transitionGroup="true" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="2dp"
+                    android:weightSum="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Neck"
+                            android:textSize="15sp"
+                            android:transitionGroup="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:weightSum="1"
+                        android:orientation="horizontal">
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:clipToPadding="false"
+
+                            android:transitionGroup="true"
+                            tools:ignore="UnusedAttribute,NewApi">
+
+                            <EditText
+                                android:id="@+id/neck_feets"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:hint="ft."
+                                android:fontFamily="sans-serif-light"
+                                android:imeOptions="actionDone"
+                                android:inputType="textNoSuggestions|number"
+                                android:maxLength="3"
+                                android:textSize="@dimen/size_edit_text"
+                                android:transitionGroup="true" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:clipToPadding="false"
+                            android:paddingEnd="5dp"
+                            android:paddingStart="5dp"
+                            android:transitionGroup="true"
+                            tools:ignore="UnusedAttribute,NewApi">
+
+                            <EditText
+                                android:fontFamily="sans-serif-light"
+                                android:id="@+id/neck_inches"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:hint="in."
+                                android:imeOptions="actionDone"
+                                android:inputType="textNoSuggestions|number"
+                                android:maxLength="3"
+                                android:paddingEnd="@dimen/spacing_double"
+                                android:paddingStart="@dimen/spacing_double"
+                                android:textSize="@dimen/size_edit_text"
+                                android:transitionGroup="true" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="2dp"
+                    android:weightSum="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Waist"
+                            android:textSize="15sp"
+                            android:transitionGroup="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:weightSum="1"
+                        android:orientation="horizontal">
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:clipToPadding="false"
+
+                            android:transitionGroup="true"
+                            tools:ignore="UnusedAttribute,NewApi">
+
+                            <EditText
+                                android:fontFamily="sans-serif-light"
+                                android:id="@+id/waist_feets"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:hint="ft."
+                                android:imeOptions="actionDone"
+                                android:inputType="textNoSuggestions|number"
+                                android:maxLength="3"
+                                android:textSize="@dimen/size_edit_text"
+                                android:transitionGroup="true" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:clipToPadding="false"
+                            android:paddingEnd="5dp"
+                            android:paddingStart="5dp"
+                            android:transitionGroup="true"
+                            tools:ignore="UnusedAttribute,NewApi">
+
+                            <EditText
+                                android:fontFamily="sans-serif-light"
+                                android:id="@+id/waist_inches"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:hint="in."
+                                android:imeOptions="actionDone"
+                                android:inputType="textNoSuggestions|number"
+                                android:maxLength="3"
+                                android:paddingEnd="@dimen/spacing_double"
+                                android:paddingStart="@dimen/spacing_double"
+                                android:textSize="@dimen/size_edit_text"
+                                android:transitionGroup="true" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/hip_layout"
+                    android:visibility="gone"
+                    android:paddingBottom="2dp"
+                    android:weightSum="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Hip"
+                            android:textSize="15sp"
+                            android:transitionGroup="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:weightSum="1"
+                        android:orientation="horizontal">
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:clipToPadding="false"
+
+                            android:transitionGroup="true"
+                            tools:ignore="UnusedAttribute,NewApi">
+
+                            <EditText
+                                android:fontFamily="sans-serif-light"
+                                android:id="@+id/hip_feets"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:hint="ft."
+                                android:imeOptions="actionDone"
+                                android:inputType="textNoSuggestions|number"
+                                android:maxLength="3"
+                                android:textSize="@dimen/size_edit_text"
+                                android:transitionGroup="true" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:clipToPadding="false"
+                            android:paddingEnd="5dp"
+                            android:paddingStart="5dp"
+                            android:transitionGroup="true"
+                            tools:ignore="UnusedAttribute,NewApi">
+
+                            <EditText
+                                android:fontFamily="sans-serif-light"
+                                android:id="@+id/hip_inches"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:hint="in."
+                                android:imeOptions="actionDone"
+                                android:inputType="textNoSuggestions|number"
+                                android:maxLength="3"
+                                android:paddingEnd="@dimen/spacing_double"
+                                android:paddingStart="@dimen/spacing_double"
+                                android:textSize="@dimen/size_edit_text"
+                                android:transitionGroup="true" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     android:id="@+id/calc"
+                    android:text="Calculate"
+                    android:visibility="gone"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/MyButton"/>
+
+                <TextView
+                    android:id="@+id/error_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/red"
+                    android:text="please check the proportions entered"/>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/def_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+
+        android:background="@color/toolbarTransparent"
+        android:layout_alignParentTop="true">
+
+
+    </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.CoordinatorLayout>
+
